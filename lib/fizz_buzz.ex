@@ -8,7 +8,8 @@ defmodule FizzBuzz do
   defp handle_file_read({:ok, result}) do
     result =
       result
-      |> String.split(",") # "1,2,3,4" -> [1,2,3,4]"
+      # "1,2,3,4" -> [1,2,3,4]"
+      |> String.split(",")
       |> Enum.map(&convert_and_evaluate_numbers/1)
 
     {:ok, result}
